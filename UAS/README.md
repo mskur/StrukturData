@@ -6,7 +6,7 @@ Mata Kuliah: Struktur Data
 Kelas: A081
 
 # JUDUL PROGRAM UAS
-Program Antrian Sunat
+Program Antrian Khitan
 
 # ANGGOTA KELOMPOK
 1. Fatwa Sifaun Nahar (20081010073)
