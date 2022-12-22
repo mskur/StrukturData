@@ -23,3 +23,4 @@ struct queueKhitan{
     nodeKhitan *rear;
 };
 typedef struct queueKhitan queueKhitan;
+
