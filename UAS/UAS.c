@@ -140,3 +140,74 @@ int ambilAntrianKhitan(queueKhitan *myQueue, int nomorAntrian){
 }
 
 //================================================================================================
+
+int panggilAntrianKhitan(queueKhitan *myQueue, int idKhitan, nodeKhitan **pHead){
+    system("cls");
+    int jenisKhitan;
+
+    printf("======= PANGGIL ANTRIAN KHITAN =======\n\n");
+    if(myQueue->count == 0){
+        printf("Antrian Kosong\n");
+    } 
+    else {
+        nodeKhitan *delAntrian = myQueue->front;
+        myQueue->front = myQueue->front->next;
+        myQueue->count--;
+        printf("Antrian %d Telah Dipanggil\n", delAntrian->nomorAntrian);
+        printf("Nama Peserta : %s\n", delAntrian->namaPeserta);
+
+        //INSERT DATA PESERTA KHITAN TO LINKED LIST
+        idKhitan++;
+        nodeKhitan *newNode = createNode();
+        newNode->idKhitan = idKhitan;
+        strcpy(newNode->namaPeserta, delAntrian->namaPeserta);
+
+        printf("\n\n======= DATA PESERTA KHITAN =======\n\n");
+        printf("Masukkan Usia Peserta : ");
+        scanf("%d", &newNode->usiaPeserta);
+        printf("Alamat Peserta        : ");
+        fflush(stdin);
+        gets(newNode->alamatPeserta);
+
+        do{
+            printf("\n== Masukkan Jenis Khitan ==\n");
+            printf("1. Khitan Laser\n");
+            printf("2. Khitan Gunting\n");
+            printf("3. Khitan Bambu\n");
+            printf("Pilih Jenis Khitan    : ");
+            scanf("%d", &jenisKhitan);
+            if(jenisKhitan == 1){
+                strcpy(newNode->jenisKhitan, "Khitan Laser");
+            }
+            else if(jenisKhitan == 2){
+                strcpy(newNode->jenisKhitan, "Khitan Gunting");
+            }
+            else if(jenisKhitan == 3){
+                strcpy(newNode->jenisKhitan, "Khitan Bambu");
+            }
+            else {
+                printf("Jenis Khitan Tidak Tersedia\n");
+            }
+        } while(jenisKhitan < 1 || jenisKhitan > 3);
+
+        newNode->next = NULL;
+        if(*pHead == NULL){
+            *pHead = newNode;
+        } 
+        else {
+            nodeKhitan *pWalker = *pHead;
+            while(pWalker->next != NULL){
+                pWalker = pWalker->next;
+            }
+            pWalker->next = newNode;
+        }
+
+        free(delAntrian);
+        printf("\nData Peserta Khitan Berhasil Ditambahkan\n");
+    }
+    getch();
+    return idKhitan;
+}
+
+//================================================================================================
+
