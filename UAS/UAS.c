@@ -108,3 +108,35 @@ nodeKhitan *createNode(void){
 
 //================================================================================================
 
+int ambilAntrianKhitan(queueKhitan *myQueue, int nomorAntrian){
+    system("cls");
+    printf("======= AMBIL ANTRIAN KHITAN =======\n\n");
+    if(myQueue->count == MAX){
+        printf("Antrian Penuh Datang Lagi Besok\n");
+    } 
+    else {
+        nomorAntrian++;
+        nodeKhitan *newNode = createNode();
+        newNode->nomorAntrian = nomorAntrian;
+
+        fflush(stdin);
+        printf("Masukkan Nama Peserta : ");
+        gets(newNode->namaPeserta);
+        printf("Nomor Antrian Anda : %d\n", newNode->nomorAntrian);
+        newNode->next = NULL;
+
+        if(myQueue->front == NULL){
+            myQueue->front = newNode;
+        } 
+        else {
+            myQueue->rear->next = newNode;
+        }
+        myQueue->rear = newNode;
+        myQueue->count++;
+        printf("\nAntrian Berhasil Dibuat\n");
+    }
+    getch();
+    return nomorAntrian;
+}
+
+//================================================================================================
