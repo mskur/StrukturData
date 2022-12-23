@@ -211,3 +211,21 @@ int panggilAntrianKhitan(queueKhitan *myQueue, int idKhitan, nodeKhitan **pHead)
 
 //================================================================================================
 
+int destroyQueueKhitan(queueKhitan *myQueue){
+    nodeKhitan *pWalker = myQueue->front;
+    while(pWalker != NULL){
+        nodeKhitan *temp = pWalker;
+        pWalker = pWalker->next;
+        free(temp);
+    }
+    myQueue->front = NULL;
+    myQueue->rear = NULL;
+    myQueue->count = 0;
+    system("cls");
+    printf("======= HAPUS ANTRIAN KHITAN =======\n\n");
+    printf("Antrian Berhasil Dihapus\n");
+    getch();
+    return 0;
+}
+
+//================================================================================================
