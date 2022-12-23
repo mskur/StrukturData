@@ -229,3 +229,45 @@ int destroyQueueKhitan(queueKhitan *myQueue){
 }
 
 //================================================================================================
+void tampilkanAntrianKhitan(queueKhitan myQueue){
+    system("cls");
+    printf("======= TAMPILKAN ANTRIAN KHITAN =======\n\n");
+
+    if(myQueue.count == 0){
+        printf("Antrian Kosong\n");
+    } 
+    else {
+        nodeKhitan *pWalker = myQueue.front;
+
+        while(pWalker != NULL){
+            printf("%d -> %s\n", pWalker->nomorAntrian, pWalker->namaPeserta);
+            pWalker = pWalker->next;
+        }
+    }
+    getch();
+}
+
+//================================================================================================
+
+void tampilkanDataPesertaKhitan(nodeKhitan *pHead){
+    system("cls");
+    printf("======= TAMPILKAN DATA PESERTA KHITAN =======\n\n");
+
+    if(pHead == NULL){
+        printf("Data Peserta Khitan Kosong\n");
+    } 
+    else {
+        nodeKhitan *pWalker = pHead;
+
+        while(pWalker != NULL){
+            printf("ID Khitan          : %d\n", pWalker->idKhitan);
+            printf("Nama Peserta       : %s\n", pWalker->namaPeserta);
+            printf("Usia Peserta       : %d\n", pWalker->usiaPeserta);
+            printf("Alamat Peserta     : %s\n", pWalker->alamatPeserta);
+            printf("Jenis Khitan       : %s\n", pWalker->jenisKhitan);
+            printf("============================================\n");
+            pWalker = pWalker->next;
+        }
+    }
+    getch();
+}
