@@ -11,8 +11,8 @@ Program Antrian Khitan
 # ANGGOTA KELOMPOK
 1. Fatwa Sifaun Nahar &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (20081010073)
 2. Imam Masukri &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (20081010074)
-3. Faris Syaifulloh &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(20081010075)
-4. Mohammad Syarifuz Zaim &nbsp;(20081010076)
+3. Mohammad Syarifuz Zaim &nbsp;(20081010076)
+4. Faris Syaifulloh &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(20081010078)
 5. Aldo Pradana Ariando&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(20081010110)
 
 # Deskripsi Singkat
