@@ -1,4 +1,4 @@
-# UAS STRUKTUR DATA KELOMPOK 3
+# UAS STUKTUR DATA KELOMPOK 3
 Source code program UAS kelompok 
 
 Mata Kuliah: Struktur Data
